@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web JMS</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Fondo gris claro */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff; /* Fondo blanco para el contenedor */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50; /* Color verde */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <section>
+        <h3>Escribe un Mensaje</h3>
+        <form action="http://localhost:8080/send" method="post" novalidate="">
+            <p>Mensaje para ser enviado a la cola JMS.</p>
+            <div><label class="sr-only" for="comment">Mensaje</label>
+                <div><textarea id="comment" name="comment" rows="7" placeholder="Mensaje"></textarea></div>
+            </div>
+            <p><input name="submit" type="submit" id="submit" value="Publicar el mensaje">
+                <input type="hidden" name="comment_post_ID" value="18834">
+                <input type="hidden" name="comment_parent" value="0">
+            </p>
+        </form>
+    </section>
+</div>
+</body>
+</html>
